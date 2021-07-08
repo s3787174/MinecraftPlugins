@@ -1,0 +1,28 @@
+ICE======================
+ICE THROW
+ICE WALL ------ DONE
+ICE WAND 
+ICE GROUND----- DONE
+SNOW ARENA
+============================================
+FIRE======================
+SWORD
+FIRE TRAIL
+FIRE BALL
+SOUL SAND
+FIRE SPREAD
+============================================
+EARTH ======================
+ROCK THROW
+LARGE JUMP
+SAND FALL
+ROCK SURROUND PLAYER
+LAUNCH ULTIMATE
+============================================
+MYSTIC======================
+DAGGER
+TELEPORT
+INVISIBLE SHACO DAMAGE
+PUFFER FISH EFFECT
+ENDERPEARL CLONE
+============================================
