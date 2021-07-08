@@ -1,9 +1,0 @@
-name: AlwaysDay
-version: 1.0
-author: test
-main: me.test.AlwaysDay.Main
-
-commands:
-  alwaysday:
-    aliases: [ad]
-    description: /alwaysday day to change personal time
