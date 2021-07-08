@@ -11,13 +11,16 @@ import org.bukkit.event.player.PlayerInteractEvent;
 public class IceGround implements Listener{	
 	@EventHandler()
 	public void placeIce(PlayerInteractEvent event) {
-		if (event.getPlayer().getInventory().getItemInMainHand().getType().equals(Material.ICE)) {
-			Player player = (Player) event.getPlayer();
-			if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+				System.out.println("AHSD");
+				Player player = (Player) event.getPlayer();
+				if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+					Location BlockLocate = event.getClickedBlock().getLocation();
+					BlockLocate.add(0,1,0);
+					BlockLocate.getBlock().setType(Material.AIR);
+				}
 				iceGroundPlace(player);
 			}
-		}
-	}
+
 	
 	public void iceGroundPlace(Player player) {		//FINISHED
 	Location Ground = player.getLocation();

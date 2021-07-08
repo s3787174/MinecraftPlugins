@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.bukkit.entity.Egg"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="org.bukkit.util.Vector"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerEggThrowEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.entity.EntityDamageByEntityEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.Entity"/>
+    <fullyQualifiedTypeName name="org.bukkit.Sound"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.block.BlockPlaceEvent"/>
+</qualifiedTypeNameHistroy>

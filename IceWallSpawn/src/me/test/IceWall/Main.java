@@ -8,6 +8,7 @@ public class Main extends JavaPlugin{
   
 	@Override
 	public void onEnable() {
+		
 		this.getServer().getPluginManager().registerEvents(new IceWall(), this);
 	}
 
