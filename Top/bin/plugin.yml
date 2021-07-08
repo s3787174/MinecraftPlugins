@@ -1,9 +1,0 @@
-name: Top
-version: 1.0
-author: test
-main: me.test.Top.Main
-
-commands:
-  Top:
-    aliases: [Top]
-    description: /Top to teleport player above ground
