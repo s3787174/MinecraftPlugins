@@ -1,7 +1,7 @@
 ICE======================
 ICE THROW
 ICE WALL ------ DONE
-ICE WAND 
+ICE WAND ------ add dmg
 ICE GROUND----- DONE
 SNOW ARENA
 ============================================
@@ -22,7 +22,7 @@ LAUNCH ULTIMATE
 MYSTIC======================
 DAGGER
 TELEPORT
-INVISIBLE SHACO DAMAGE
-PUFFER FISH EFFECT
+INVISIBLE SHACO DAMAGE - increase damage + invisibility
+PUFFER FISH EFFECT // CONFUSION EFFECT
 ENDERPEARL CLONE
 ============================================

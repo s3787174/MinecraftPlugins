@@ -6,7 +6,7 @@ DEFENCE:
 - Ice Wall
 
 ATTACK:
-Ice Wand - Throwns Snowballs / Damage
+Ice Wand - Throwns eggs/ Damage
 
 Inhibit /Slow down / Stun:
 Place Ice block - Ground turns ice - speed boost
