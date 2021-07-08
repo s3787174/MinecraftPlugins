@@ -1,0 +1,51 @@
+package me.test.WorldEdit.commands;
+
+import org.bukkit.Location;
+import org.bukkit.Material;
+
+public class WorldEditFill {
+
+	public WorldEditFill() {
+		System.out.println("FILLING HOLES");
+	}
+
+	public void MathFill(Location pos1, Location pos2, String tempBlock) {
+		Location tempLocation1 = pos1.clone();
+		Location tempLocation2 = pos2.clone();
+		
+		Double XDifference;
+		Double ZDifference;
+		Double YDifference;
+
+		XDifference = pos1.getX() - pos2.getX(); 
+		ZDifference = pos1.getZ() - pos2.getZ(); 
+		YDifference = pos1.getY() - pos2.getY();
+		
+		System.out.println("DEBUGGING ==================");
+		System.out.println("XDiff: " +XDifference);
+		System.out.println("ZDiff: " +ZDifference);
+		System.out.println("YDiff: " +YDifference);
+
+
+		Location Origin = pos1.clone();
+		if (XDifference > 0 || ZDifference > 0) {
+			Origin = pos2.clone();
+		} else {
+			XDifference *= -1;
+			ZDifference *= -1;
+			YDifference *= -1;
+		}
+		
+		for(int Y = 0; Y < YDifference; Y++) {
+			for(int X = 0; X < XDifference; X++) {
+			for(int Z = 0; Z < ZDifference; Z++) {
+				Origin.getBlock().setType(Material.GLOWSTONE);
+				Origin.add(0, 0, 1);
+			}
+			Origin.add(1, 0, 0);
+			Origin.subtract(0,0,ZDifference);
+
+			}
+		}
+	}
+}

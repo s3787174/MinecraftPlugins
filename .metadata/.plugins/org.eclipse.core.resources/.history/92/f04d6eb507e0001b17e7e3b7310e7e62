@@ -1,0 +1,56 @@
+package me.test.WorldEdit.commands;
+
+import org.bukkit.Location;
+import org.bukkit.Material;
+
+public class WorldEditFill {
+
+	public WorldEditFill() {
+		System.out.println("FILLING HOLES");
+	}
+		
+	public void MathFill(Location pos1, Location pos2, String tempBlock) {
+		Location tempLocation1 = pos1.clone();
+		Location tempLocation2 = pos2.clone();
+		
+		Double XDifference;
+		Double ZDifference;
+		XDifference = pos1.getX() - pos2.getX(); 
+
+		ZDifference = pos1.getZ() - pos2.getZ(); 
+		
+		
+		System.out.println("DEBUGGING ==================");
+		System.out.println("XDiff: " +XDifference);
+		System.out.println("YDiff: " +XDifference);
+
+		Location Origin = pos2.clone();
+		if (XDifference > 0 || ZDifference > 0) {
+		for(int X = 0; X < XDifference; X++) {
+			for(int Z = 0; Z < ZDifference; Z++) {
+				Origin.getBlock().setType(Material.COBBLESTONE);
+				Origin.add(0, 0, 1);
+			}
+			Origin.add(1, 0, 0);
+			Origin.subtract(0,0,ZDifference);
+		}
+		} else {
+			XDifference = XDifference * -1;
+			ZDifference = ZDifference * -1;
+			
+			for(int X = 0; X < XDifference; X++) {
+				for(int Z = 0; Z < ZDifference; Z++) {
+					Origin.getBlock().setType(Material.COBBLESTONE);
+					Origin.add(0, 0, -1);
+				}
+				Origin.add(-1, 0, 0);
+				Origin.subtract(0,0,ZDifference);
+			}
+			
+			
+			
+		}
+
+	}
+	
+}
