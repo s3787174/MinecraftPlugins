@@ -1,0 +1,9 @@
+name: WorldEdit
+version: 1.0
+author: test
+main: me.test.WorldEdit.Main
+
+commands:
+  WorldEdit:
+    aliases: [WE]
+    description: /WorldEdit to enable world edit mode

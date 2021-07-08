@@ -1,0 +1,9 @@
+name: IceWalker
+version: 1.0
+author: test
+main: me.test.IceWalker.Main
+
+commands:
+  IceWalk:
+    aliases: [IW]
+    description: ya mum
