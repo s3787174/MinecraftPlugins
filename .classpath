@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AlwaysDay/src"/>
+	<classpathentry kind="src" path="HomeCreate/src"/>
+	<classpathentry kind="src" path="IceWalker/src"/>
+	<classpathentry kind="src" path="IceWallSpawn/src"/>
+	<classpathentry kind="src" path="SetHome/src"/>
+	<classpathentry kind="src" path="Top/src"/>
+	<classpathentry kind="src" path="WorldEdit/src"/>
+	<classpathentry kind="output" path="AlwaysDay/bin"/>
+</classpath>

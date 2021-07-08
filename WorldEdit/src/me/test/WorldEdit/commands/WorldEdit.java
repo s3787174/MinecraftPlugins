@@ -30,7 +30,6 @@ public class WorldEdit implements CommandExecutor{
 	    Player p = event.getPlayer();
 	 
 	    if(p.getItemInHand().getType() == Material.BLAZE_POWDER){
-	    	p.chat("HOWDY");
 	    }
 	    else if(p.getItemInHand().getType() == Material.BLAZE_ROD){
 	        //Do whatever
@@ -42,7 +41,6 @@ public class WorldEdit implements CommandExecutor{
 		Player p = (Player) sender;
 		Location loc = p.getLocation();
 		World w = p.getWorld();
-		p.chat("EDITTING THING");
 //
 //		PlayerInteractEntityEvent e = (PlayerInteractEntityEvent) p.getPlayer();
 //		if (e.getRightClicked() != null) {

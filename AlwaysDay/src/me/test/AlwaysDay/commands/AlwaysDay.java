@@ -28,22 +28,12 @@ public class AlwaysDay implements CommandExecutor{
 		String resetName = "reset";
 		p.chat(newString);
 
-		if (newString.equalsIgnoreCase(resetName)) {
-			p.chat("WHAT THE FUCk");
-		}
-		
 		
 		if (!newString.equalsIgnoreCase(resetName)) {
-			p.chat("WHY IS IT IN THIS LOOP");
-			
 			String timeArgs = args[0];
-
 			int time = Integer.parseInt(timeArgs);
 			p.setPlayerTime(time, false);	
-			p.chat("Done");
-			p.chat("WORLD TIME THO: " + w.getTime());
 		} else {
-			p.chat("ASUHDLAIKSJH D");
 			p.resetPlayerTime();
 		}
 		
