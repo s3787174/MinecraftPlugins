@@ -1,7 +1,11 @@
 package me.test.WorldEdit.commands;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,26 +26,45 @@ public class WorldEdit implements Listener, CommandExecutor {
 	private Location Pos1;
 	private Location Pos2;
 	private WorldEditFill fill;
-
+	private List<Material> undoListMaterial = new ArrayList<>();
+	private List<Location> undoListLocation = new ArrayList<>();
+	
 	public WorldEdit(Main plugin) {
-		fill = new WorldEditFill();
+		fill = new WorldEditFill(undoListMaterial, undoListLocation);
 		this.plugin = plugin;
 		plugin.getCommand("worldedit").setTabCompleter(new TabComplete());
 		plugin.getCommand("worldedit").setExecutor(this);
 	}
-
+	
+	private void setUndoList() {
+		this.undoListMaterial = fill.getUndoList();
+	}
+	
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(args[0].equalsIgnoreCase("fill")) {
 			if(validPos()) {
 				fill.Fillin(Pos1, Pos2, args[1]);
+				setUndoList();
+
 			} else {
 				sender.sendMessage(ChatColor.RED +"You need to choose your positions first");
 			}
 		}
-		if(args[0].equalsIgnoreCase("replace")) {
+		else if(args[0].equalsIgnoreCase("replace")) {
 			if(validPos()) {
 				fill.replace(Pos1, Pos2, args[1], args[2]);
+//				setUndoList();
+			} else {
+				sender.sendMessage(ChatColor.RED +"You need to choose your positions first");
+			}
+		}
+		else if(args[0].equalsIgnoreCase("undo")) {
+			if(fill.checkUndo()) {
+				fill.undo();
+				sender.sendMessage(ChatColor.RED +"Blocks are back in place");
+
 			} else {
 				sender.sendMessage(ChatColor.RED +"You need to choose your positions first");
 			}

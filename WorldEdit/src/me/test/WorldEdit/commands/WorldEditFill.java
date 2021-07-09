@@ -1,7 +1,13 @@
 package me.test.WorldEdit.commands;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.data.BlockData;
 
 public class WorldEditFill {
 
@@ -9,9 +15,34 @@ public class WorldEditFill {
 	private Double ZDifference;
 	private Double YDifference;
 	private Location Origin;
-
-	public WorldEditFill() {
+	private List<Material> undoListMaterial;
+	private List<Location> undoListLocation;
+	
+	public WorldEditFill(List<Material> undoListMaterial, List<Location> undoListLocation) {
+		this.undoListMaterial = undoListMaterial;
+		this.undoListLocation = undoListLocation;
 	}
+	
+	public List getUndoList() {
+		return this.undoListMaterial;
+	}
+	
+	
+	public void undo() {
+		for (int i = 0; i < undoListLocation.size(); i++) {
+			Material tempBlock = undoListMaterial.get(i);
+			undoListLocation.get(i).getBlock().setType(tempBlock);
+		}
+		
+	}
+	
+	public boolean checkUndo() {
+		if (undoListMaterial.isEmpty()) {
+			return false;
+		}
+		return true;
+	}
+	
 	
 	public void replace(Location pos1, Location pos2, String oldBlock, String newBlock) {
 		Material replacementblock = Material.matchMaterial(newBlock);
@@ -56,6 +87,8 @@ public class WorldEditFill {
 			for (int X = 0; X < XDifference + 1; X++) {
 				for (int Z = 0; Z < ZDifference + 1; Z++) {
 					if (Origin.getBlock().getType() != Material.GLOWSTONE) {
+						undoListMaterial.add(Origin.getBlock().getType());
+						undoListLocation.add(Origin.clone().getBlock().getLocation());
 						Origin.getBlock().setType(block);
 					}
 					Origin.add(0, 0, 1);
