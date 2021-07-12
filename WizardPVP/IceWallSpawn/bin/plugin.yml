@@ -1,0 +1,10 @@
+name: IceWallSpawn
+version: 1.0
+author: test
+main: me.test.IceWall.Main
+api-version: 1.13
+
+commands:
+  IceWall:
+    aliases: [IW]
+    description: /IceWall to enable snowball walls
