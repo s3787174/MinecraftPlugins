@@ -1,0 +1,17 @@
+name: SetHome
+version: 1.0
+author: test
+main: me.test.SetHome.Main
+
+commands:
+  sethome:
+    aliases: [sh]
+    description: /sethome to test
+    
+  home:
+    aliases: [h]
+    description: /home to go home
+    
+  listhomes:
+    aliases: [ls]
+    description: ya mum
