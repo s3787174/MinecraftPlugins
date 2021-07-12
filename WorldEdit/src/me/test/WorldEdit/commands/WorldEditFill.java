@@ -45,9 +45,10 @@ public class WorldEditFill {
 	
 	
 	public void replace(Location pos1, Location pos2, String oldBlock, String newBlock) {
+		undoListMaterial.clear();
+		undoListLocation.clear();
 		Material replacementblock = Material.matchMaterial(newBlock);
 		Material replacedBlock = Material.matchMaterial(oldBlock);
-
 		MathFill(pos1, pos2);
 		replaceLoop(XDifference, ZDifference, YDifference, Origin, replacementblock, replacedBlock);
 	}
@@ -73,6 +74,8 @@ public class WorldEditFill {
 	}
 
 	public void Fillin(Location pos1, Location pos2, String tempBlock) {
+		undoListMaterial.clear();
+		undoListLocation.clear();
 		Material block = Material.matchMaterial(tempBlock);
 		MathFill(pos1, pos2);
 		fillInLoop(XDifference, ZDifference, YDifference, Origin, block);
