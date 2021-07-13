@@ -9,4 +9,9 @@
     <fullyQualifiedTypeName name="org.bukkit.Sound"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.bukkit.event.block.BlockPlaceEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.Location"/>
+    <fullyQualifiedTypeName name="net.minecraft.server.v1_16_R3.AbstractDragonController"/>
+    <fullyQualifiedTypeName name="net.minecraft.server.v1_16_R3.EntitySnowman"/>
+    <fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
+    <fullyQualifiedTypeName name="org.bukkit.plugin.java.JavaPlugin"/>
 </qualifiedTypeNameHistroy>

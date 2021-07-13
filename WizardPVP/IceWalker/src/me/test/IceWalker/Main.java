@@ -9,7 +9,7 @@ public class Main extends JavaPlugin{
 	
 	@Override
 	public void onEnable() {
-		getServer().getPluginManager().registerEvents(new IceWalker(), this);
+		getServer().getPluginManager().registerEvents(new IceWalker(this), this);
 	}
 
 	@Override

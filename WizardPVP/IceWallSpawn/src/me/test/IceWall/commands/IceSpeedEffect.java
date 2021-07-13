@@ -19,7 +19,7 @@ public class IceSpeedEffect implements Listener{
 		Location onGround = player.getLocation();
 		onGround.subtract(0,1,0);
 		if (onGround.getBlock().getType().equals(Material.ICE)) {
-			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1, 5));
+			player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000, 5));
 		}
 	}
 }

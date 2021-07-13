@@ -9,7 +9,7 @@ public class Main extends JavaPlugin{
 	@Override
 	public void onEnable() {
 		
-		this.getServer().getPluginManager().registerEvents(new IceWall(), this);
+		this.getServer().getPluginManager().registerEvents(new IceWall(this), this);
 	}
 
 	@Override

@@ -1,0 +1,10 @@
+name: FireWizard
+version: 1.0
+author: test
+main: me.test.FireWizard.Main
+api-version: 1.13
+
+commands:
+  FireWizard:
+    aliases: [FireWizard]
+    description: /FireWizard to enable snowball walls

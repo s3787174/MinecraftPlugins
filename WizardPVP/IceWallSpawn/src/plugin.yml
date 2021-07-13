@@ -5,6 +5,6 @@ main: me.test.IceWall.Main
 api-version: 1.13
 
 commands:
-  IceWall:
-    aliases: [IW]
-    description: /IceWall to enable snowball walls
+  IceWallSpawn:
+    aliases: [IceWallSpawn]
+    description: /IceWallSpawn to enable snowball walls

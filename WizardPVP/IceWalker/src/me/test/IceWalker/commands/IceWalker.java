@@ -1,5 +1,7 @@
 package me.test.IceWalker.commands;
 
+import java.util.ArrayList;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -16,12 +18,31 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import me.test.IceWalker.Main;
 import net.minecraft.server.v1_16_R3.EntityTypes;
 
-public class IceWalker implements Listener {
-
+public class IceWalker implements Listener, CommandExecutor {
+	private ArrayList<Player> WalkingList = new ArrayList();
+	private Main plugin;
+	
+	
+	public IceWalker(Main plugin) {
+		this.plugin = plugin;
+		plugin.getCommand("IceWalker").setExecutor(this);
+	}
+	@Override
+	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
+		Player player = (Player) arg0;
+		if (arg3[0].equalsIgnoreCase("true")) {
+			WalkingList.add(player);
+		} else {
+			WalkingList.remove(player);
+		}
+		return false;
+	}
 	
 	@EventHandler
 	public void onPlayerMove(PlayerMoveEvent e) {
+		
 		Player p = e.getPlayer();
+		if (WalkingList.contains(p)) {
 		Location Loc = e.getPlayer().getLocation();
 		Location TempLoc = e.getPlayer().getLocation();
 		
@@ -48,4 +69,7 @@ public class IceWalker implements Listener {
 			LL.getBlock().setType(Material.ICE);
 		}
 		}
+
+
+	}
 }

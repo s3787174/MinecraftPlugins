@@ -1,5 +1,0 @@
-package me.test.WorldEdit.commands;
-
-public class TabComplete implements TabCompleter {
-
-}
